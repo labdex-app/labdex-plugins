@@ -1,7 +1,7 @@
 # labdex plugins
 
-The official Marketplace of [labdex](https://github.com/reykimedev/labdex): a signed
-`index.json` at **https://reykimedev.github.io/labdex-plugins/index.json**, which every labdex
+The official Marketplace of [labdex](https://github.com/labdex-app/labdex): a signed
+`index.json` at **https://labdex-app.github.io/labdex-plugins/index.json**, which every labdex
 trusts out of the box (signed with the labdex project key).
 
 > [!WARNING]
@@ -23,27 +23,27 @@ trusts out of the box (signed with the labdex project key).
 
 | Plugin | Repository |
 | --- | --- |
-| Ansible runner | [labdex-plugin-ansible](https://github.com/reykimedev/labdex-plugin-ansible) |
-| Backup | [labdex-plugin-backup](https://github.com/reykimedev/labdex-plugin-backup) |
-| Beszel | [labdex-plugin-beszel](https://github.com/reykimedev/labdex-plugin-beszel) |
-| Certificates | [labdex-plugin-certificates](https://github.com/reykimedev/labdex-plugin-certificates) |
-| Docker | [labdex-plugin-docker](https://github.com/reykimedev/labdex-plugin-docker) |
-| File exports | [labdex-plugin-exports](https://github.com/reykimedev/labdex-plugin-exports) |
-| k3s / Kubernetes | [labdex-plugin-k3s](https://github.com/reykimedev/labdex-plugin-k3s) |
-| Login banner & prompt (Ansible) | [labdex-plugin-motd](https://github.com/reykimedev/labdex-plugin-motd) |
-| nmap service discovery | [labdex-plugin-nmap](https://github.com/reykimedev/labdex-plugin-nmap) |
-| OPNsense | [labdex-plugin-opnsense](https://github.com/reykimedev/labdex-plugin-opnsense) |
-| Prometheus service discovery | [labdex-plugin-prometheus-sd](https://github.com/reykimedev/labdex-plugin-prometheus-sd) |
-| Proxmox VE | [labdex-plugin-proxmox](https://github.com/reykimedev/labdex-plugin-proxmox) |
-| Routing discovery | [labdex-plugin-routing](https://github.com/reykimedev/labdex-plugin-routing) |
-| SNMP neighbours | [labdex-plugin-snmp](https://github.com/reykimedev/labdex-plugin-snmp) |
-| Tailscale / Headscale | [labdex-plugin-tailscale](https://github.com/reykimedev/labdex-plugin-tailscale) |
-| Technitium DNS | [labdex-plugin-technitium](https://github.com/reykimedev/labdex-plugin-technitium) |
-| Traefik | [labdex-plugin-traefik](https://github.com/reykimedev/labdex-plugin-traefik) |
-| UniFi Network | [labdex-plugin-unifi](https://github.com/reykimedev/labdex-plugin-unifi) |
-| Uptime Kuma | [labdex-plugin-uptimekuma](https://github.com/reykimedev/labdex-plugin-uptimekuma) |
-| VictoriaMetrics / Prometheus | [labdex-plugin-victoriametrics](https://github.com/reykimedev/labdex-plugin-victoriametrics) |
-| YAML mirror | [labdex-plugin-yaml-mirror](https://github.com/reykimedev/labdex-plugin-yaml-mirror) |
+| Ansible runner | [labdex-plugin-ansible](https://github.com/labdex-app/labdex-plugin-ansible) |
+| Backup | [labdex-plugin-backup](https://github.com/labdex-app/labdex-plugin-backup) |
+| Beszel | [labdex-plugin-beszel](https://github.com/labdex-app/labdex-plugin-beszel) |
+| Certificates | [labdex-plugin-certificates](https://github.com/labdex-app/labdex-plugin-certificates) |
+| Docker | [labdex-plugin-docker](https://github.com/labdex-app/labdex-plugin-docker) |
+| File exports | [labdex-plugin-exports](https://github.com/labdex-app/labdex-plugin-exports) |
+| k3s / Kubernetes | [labdex-plugin-k3s](https://github.com/labdex-app/labdex-plugin-k3s) |
+| Login banner & prompt (Ansible) | [labdex-plugin-motd](https://github.com/labdex-app/labdex-plugin-motd) |
+| nmap service discovery | [labdex-plugin-nmap](https://github.com/labdex-app/labdex-plugin-nmap) |
+| OPNsense | [labdex-plugin-opnsense](https://github.com/labdex-app/labdex-plugin-opnsense) |
+| Prometheus service discovery | [labdex-plugin-prometheus-sd](https://github.com/labdex-app/labdex-plugin-prometheus-sd) |
+| Proxmox VE | [labdex-plugin-proxmox](https://github.com/labdex-app/labdex-plugin-proxmox) |
+| Routing discovery | [labdex-plugin-routing](https://github.com/labdex-app/labdex-plugin-routing) |
+| SNMP neighbours | [labdex-plugin-snmp](https://github.com/labdex-app/labdex-plugin-snmp) |
+| Tailscale / Headscale | [labdex-plugin-tailscale](https://github.com/labdex-app/labdex-plugin-tailscale) |
+| Technitium DNS | [labdex-plugin-technitium](https://github.com/labdex-app/labdex-plugin-technitium) |
+| Traefik | [labdex-plugin-traefik](https://github.com/labdex-app/labdex-plugin-traefik) |
+| UniFi Network | [labdex-plugin-unifi](https://github.com/labdex-app/labdex-plugin-unifi) |
+| Uptime Kuma | [labdex-plugin-uptimekuma](https://github.com/labdex-app/labdex-plugin-uptimekuma) |
+| VictoriaMetrics / Prometheus | [labdex-plugin-victoriametrics](https://github.com/labdex-app/labdex-plugin-victoriametrics) |
+| YAML mirror | [labdex-plugin-yaml-mirror](https://github.com/labdex-app/labdex-plugin-yaml-mirror) |
 
 ## Your own plugins
 

@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install labdex
-        run: pip install "labdex @ git+https://github.com/reykimedev/labdex@main#subdirectory=backend"
+        run: pip install "labdex @ git+https://github.com/labdex-app/labdex@main#subdirectory=backend"
       - name: Build the signed index
         env:
           LABDEX_SIGNING_KEY: ${{ secrets.LABDEX_SIGNING_KEY }}
