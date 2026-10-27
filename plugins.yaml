@@ -2,12 +2,10 @@
 # its signed releases are the versions.
 name: labdex official
 description: Official labdex plugins, signed with the labdex project key
-# Every public repository named labdex-plugin-* of these owners is included (a new one shows
-# up by itself). reykimedev until all plugins have moved to labdex-app: a repository is listed
-# by one owner only, so nothing appears twice.
+# Every public repository of labdex-app named labdex-plugin-* is included (a new one shows
+# up by itself).
 discover:
   - {owner: labdex-app, prefix: labdex-plugin-}
-  - {owner: reykimedev, prefix: labdex-plugin-}
 # List a repository only to withdraw a version:
 #   - {repo: labdex-app/labdex-plugin-x, withdrawn: {"1.2": "why"}}
 plugins: []
