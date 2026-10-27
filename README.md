@@ -11,8 +11,8 @@ trusts out of the box (signed with the labdex project key).
 
 ## How it works
 
-- Every plugin lives in its own repository (`labdex-plugin-<id>`). Tagging a version there
-  signs the plugin and attaches `<id>-<version>.zip` to a GitHub release.
+- Every plugin lives in its own repository (`labdex-plugin-<id>`). Publishing a GitHub
+  release there (tag `v<version>`) signs the plugin and attaches `<id>-<version>.zip` to it.
 - [`plugins.yaml`](plugins.yaml) lists those repositories. The
   [publish workflow](.github/workflows/publish.yml) reads their releases every six hours (or
   when this repository changes), checks each archive's checksum and signature, and publishes
