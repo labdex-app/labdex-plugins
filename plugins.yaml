@@ -1,0 +1,26 @@
+# The labdex official Marketplace: every plugin here lives in its own repository;
+# its signed releases are the versions. Withdraw a version with withdrawn: {"1.2": "why"}.
+name: labdex official
+description: Official labdex plugins, signed with the labdex project key
+plugins:
+  - repo: reykimedev/labdex-plugin-ansible
+  - repo: reykimedev/labdex-plugin-backup
+  - repo: reykimedev/labdex-plugin-beszel
+  - repo: reykimedev/labdex-plugin-certificates
+  - repo: reykimedev/labdex-plugin-docker
+  - repo: reykimedev/labdex-plugin-exports
+  - repo: reykimedev/labdex-plugin-k3s
+  - repo: reykimedev/labdex-plugin-motd
+  - repo: reykimedev/labdex-plugin-nmap
+  - repo: reykimedev/labdex-plugin-opnsense
+  - repo: reykimedev/labdex-plugin-prometheus-sd
+  - repo: reykimedev/labdex-plugin-proxmox
+  - repo: reykimedev/labdex-plugin-routing
+  - repo: reykimedev/labdex-plugin-snmp
+  - repo: reykimedev/labdex-plugin-tailscale
+  - repo: reykimedev/labdex-plugin-technitium
+  - repo: reykimedev/labdex-plugin-traefik
+  - repo: reykimedev/labdex-plugin-unifi
+  - repo: reykimedev/labdex-plugin-uptimekuma
+  - repo: reykimedev/labdex-plugin-victoriametrics
+  - repo: reykimedev/labdex-plugin-yaml-mirror

@@ -1,0 +1,60 @@
+name: Publish the Marketplace
+
+# Reads every plugin repository in plugins.yaml, checks each release's signature and
+# checksum, writes index.json signed with the LABDEX_SIGNING_KEY secret (the labdex
+# project key) and publishes it to GitHub Pages:
+#   https://<owner>.github.io/labdex-plugins/index.json
+# Runs on changes to plugins.yaml, every six hours (to pick up new releases), by hand,
+# and when a plugin repository sends a "plugin-released" dispatch.
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [plugin-released]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install labdex
+        run: pip install "labdex @ git+https://github.com/reykimedev/labdex@main#subdirectory=backend"
+      - name: Build the signed index
+        env:
+          LABDEX_SIGNING_KEY: ${{ secrets.LABDEX_SIGNING_KEY }}
+          LABDEX_DATA: ${{ runner.temp }}/labdex-data
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          if [ -z "$LABDEX_SIGNING_KEY" ]; then echo "::error::add the LABDEX_SIGNING_KEY secret"; exit 1; fi
+          umask 077; printf '%s\n' "$LABDEX_SIGNING_KEY" > "$RUNNER_TEMP/key.pem"
+          labdex plugin build-index plugins.yaml site --key "$RUNNER_TEMP/key.pem"
+          rm -f "$RUNNER_TEMP/key.pem"
+          cp README.md site/ 2>/dev/null || true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
