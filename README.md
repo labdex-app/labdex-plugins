@@ -13,9 +13,9 @@ trusts out of the box (signed with the labdex project key).
 
 - Every plugin lives in its own repository (`labdex-plugin-<id>`). Publishing a GitHub
   release there (tag `v<version>`) signs the plugin and attaches `<id>-<version>.zip` to it.
-- [`plugins.yaml`](plugins.yaml) lists those repositories. The
-  [publish workflow](.github/workflows/publish.yml) reads their releases every six hours (or
-  when this repository changes), checks each archive's checksum and signature, and publishes
+- [`plugins.yaml`](plugins.yaml) finds those repositories (every public `labdex-plugin-*`
+  repository is included by itself). The [publish workflow](.github/workflows/publish.yml)
+  reads their releases every hour (and when this repository changes), checks each archive's checksum and signature, and publishes
   the index: every release is a version you can install, update to or go back to, with its
   release notes.
 - A version is withdrawn by adding `withdrawn: {"1.2": "why"}` to its entry. labdex then warns

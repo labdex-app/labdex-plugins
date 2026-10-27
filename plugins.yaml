@@ -2,6 +2,10 @@
 # its signed releases are the versions. Withdraw a version with withdrawn: {"1.2": "why"}.
 name: labdex official
 description: Official labdex plugins, signed with the labdex project key
+# Every public reykimedev repository named labdex-plugin-* is included too (a new one shows up by itself);
+# list one below only to withdraw a version.
+discover:
+  - {owner: reykimedev, prefix: labdex-plugin-}
 plugins:
   - repo: reykimedev/labdex-plugin-ansible
   - repo: reykimedev/labdex-plugin-backup
