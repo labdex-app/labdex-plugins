@@ -12,7 +12,7 @@ The official labdex Marketplace: a signed `index.json` built from the releases o
 
 1. **Branch:** work on your own branch, never push to `main`. One topic per branch and pull request.
 2. **Before you push**, run what CI runs and make it pass locally:
-   - `the publish workflow (`.github/workflows/publish.yml`) checks every archive's checksum and signature`
+   - the publish workflow (`.github/workflows/publish.yml`), which checks every archive's checksum and signature
 3. **Pull request:** open it as a **draft** and fill in the template
    (`.github/pull_request_template.md`). Link the issue.
 4. **CI:** wait for the checks (the build runs on every pull request). Fix failures
