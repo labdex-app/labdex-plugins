@@ -1,5 +1,7 @@
 # labdex plugins
 
+[![Publish the Marketplace](https://github.com/labdex-app/labdex-plugins/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/labdex-app/labdex-plugins/actions/workflows/publish.yml?query=branch%3Amain) [![Buy Me a Coffee](https://img.shields.io/badge/buy%20me%20a%20coffee-bitsandbricks-7c3aed?logo=buymeacoffee&logoColor=white&labelColor=181b20)](https://buymeacoffee.com/bitsandbricks)
+
 The official Marketplace of [labdex](https://github.com/labdex-app/labdex): a signed
 `index.json` at **https://labdex-app.github.io/labdex-plugins/index.json**, which every labdex
 trusts out of the box (signed with the labdex project key).
